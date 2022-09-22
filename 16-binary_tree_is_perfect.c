@@ -45,7 +45,7 @@ size_t binary_tree_leaves(const binary_tree_t *tree)
 	return (r_leaf + l_leaf);
 }
 
-/* *
+/**
  * binary_tree_height - Computes the HEIGHT of a binary tree
  * @tree: Binary tree root node
  *
