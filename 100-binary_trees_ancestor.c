@@ -16,9 +16,11 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 	if (!first || !second)
 		return (NULL);
 
+	/* Find depth of both nodes */
 	f_depth = binary_tree_depth(first);
 	s_depth = binary_tree_depth(second);
 
+	/* Ensure both depths are equal */
 	while (f_depth < s_depth)
 	{
 		second = second->parent;
@@ -31,6 +33,7 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 		f_depth--;
 	}
 
+	/* Compare and move reduce depths of nodes if not equal */
 	while (first)
 	{
 		if (first == second)
